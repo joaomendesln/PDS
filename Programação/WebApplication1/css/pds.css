@@ -1,0 +1,104 @@
+﻿/*
+ * Globals
+ */
+
+@media (min-width: 48em) {
+  html {
+    font-size: 18px;
+  }
+}
+
+body {
+  font-family: Georgia, "Times New Roman", Times, serif;
+  color: #555;
+}
+
+h1,
+.h1,
+h2,
+.h2,
+h3,
+.h3,
+h4,
+.h4,
+h5,
+.h5,
+h6,
+.h6 {
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-weight: 400;
+}
+
+/*
+ * Override Bootstrap's default container.
+ */
+
+.container {
+  max-width: 70rem;
+}
+
+/*
+ * Header
+ */
+
+header {
+  background-color: #428bca;
+  padding: 5px;
+}
+
+header h1 {
+  color: #efefef;
+  text-align: center;
+  font-size: 27pt;
+}
+
+/*
+ * Blog name and description
+ */
+
+.blog-header {
+  padding-bottom: 1.25rem;
+  margin-bottom: 2rem;
+  border-bottom: .05rem solid #eee;
+}
+.blog-title {
+  margin-bottom: 0;
+  font-size: 2rem;
+  font-weight: 400;
+}
+.blog-description {
+  font-size: 1.1rem;
+  color: #999;
+}
+
+@media (min-width: 40em) {
+  .blog-title {
+    font-size: 3.5rem;
+  }
+}
+
+/*
+ * Footer
+ */
+
+footer {
+  background-color: #428bca;
+  padding: 4px;
+  color: #ddd;
+  text-align: center;
+}
+footer a {
+  font-weight: 600;  
+  color: #eee;  
+}
+
+/*
+ * Index
+ */
+
+input {
+  background-color: #3498db;
+  color: #eee;
+  border: none;
+  border-radius: 3px;
+}

@@ -6,46 +6,24 @@
 <head runat="server">
     <title></title>
     <link href="css/bootstrap.css" rel="stylesheet" />
-    <link href="css/teste.css" rel="stylesheet" />
+    <link href="css/pds.css" rel="stylesheet" />
     <asp:ContentPlaceHolder ID="head" runat="server">
     </asp:ContentPlaceHolder>
 </head>
 <body>
     <form id="form1" runat="server">
         <header>
-          <div class="blog-masthead">
-            <div class="container">
-              <nav class="nav">
-                <a class="nav-link active" href="#">Home</a>
-                <a class="nav-link" href="#">New features</a>
-                <a class="nav-link" href="#">Press</a>
-                <a class="nav-link" href="#">New hires</a>
-                <a class="nav-link" href="#">About</a>
-              </nav>
-            </div>
-          </div>
-
-          <div class="blog-header">
-            <div class="container">
-              <h1 class="blog-title">The Bootstrap Blog</h1>
-              <p class="lead blog-description">An example blog template built with Bootstrap.</p>
-            </div>
-          </div>
+             <h1>Projeto de PDS</h2>
         </header>
 
         <main role="main" class="container">
-            <div class="row">
-        <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+                <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
         
-        </asp:ContentPlaceHolder>
-            </div>
+                </asp:ContentPlaceHolder>
         </main><!-- /.container -->
 
-        <footer class="blog-footer">
-          <p>Blog template built for <a href="https://getbootstrap.com/">Bootstrap</a> by <a href="https://twitter.com/mdo">@mdo</a>.</p>
-          <p>
-            <a href="#">Back to top</a>
-          </p>
+        <footer>
+          <p>Desenvolvido por <a>Clara Bandeira</a>, <a>João Mendes</a>, <a>Rute Barbalho</a> e <a>Tuane Peres</a>.</p>
         </footer>
 
 

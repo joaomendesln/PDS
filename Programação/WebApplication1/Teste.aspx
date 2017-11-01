@@ -48,7 +48,40 @@
                         <asp:BoundField DataField="email" HeaderText="email" SortExpression="email" />
                     </Columns>
                 </asp:GridView>
-                <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:testeConnectionString %>" SelectCommand="SELECT * FROM [Cliente]"></asp:SqlDataSource>
+                <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:ProjetoPDSConnectionString %>" SelectCommand="SELECT * FROM [Cliente]"></asp:SqlDataSource>
+                <asp:DataList ID="DataList1" runat="server" DataSourceID="ObjectDataSource1">
+                    <ItemTemplate>
+                        idCliente:
+                        <asp:Label ID="idClienteLabel" runat="server" Text='<%# Eval("idCliente") %>' />
+                        <br />
+                        nome:
+                        <asp:Label ID="nomeLabel" runat="server" Text='<%# Eval("nome") %>' />
+                        <br />
+                        telefones:
+                        <asp:Label ID="telefonesLabel" runat="server" Text='<%# Eval("telefones") %>' />
+                        <br />
+                        cidade:
+                        <asp:Label ID="cidadeLabel" runat="server" Text='<%# Eval("cidade") %>' />
+                        <br />
+                        estado:
+                        <asp:Label ID="estadoLabel" runat="server" Text='<%# Eval("estado") %>' />
+                        <br />
+                        endereco:
+                        <asp:Label ID="enderecoLabel" runat="server" Text='<%# Eval("endereco") %>' />
+                        <br />
+                        pessoa:
+                        <asp:Label ID="pessoaLabel" runat="server" Text='<%# Eval("pessoa") %>' />
+                        <br />
+                        certidao:
+                        <asp:Label ID="certidaoLabel" runat="server" Text='<%# Eval("certidao") %>' />
+                        <br />
+                        email:
+                        <asp:Label ID="emailLabel" runat="server" Text='<%# Eval("email") %>' />
+                        <br />
+<br />
+                    </ItemTemplate>
+                </asp:DataList>
+                <asp:ObjectDataSource ID="ObjectDataSource1" runat="server" SelectMethod="SelectAll" TypeName="WebApplication1.DAL.DALCliente"></asp:ObjectDataSource>
              </div>
         </main><!-- /.container -->
 
