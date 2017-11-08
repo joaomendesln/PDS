@@ -20,7 +20,7 @@ namespace WebApplication1.DAL
         [DataObjectMethod(DataObjectMethodType.Select)]
         public List<Modelo.Funcionario> SelectAll()
         {
-            Modelo.Cliente aFuncionario;
+            Modelo.Funcionario aFuncionario;
             List<Modelo.Funcionario> aListFuncionario = new List<Modelo.Funcionario>();
             SqlConnection conn = new SqlConnection(connectionString);
             conn.Open();
@@ -40,7 +40,7 @@ namespace WebApplication1.DAL
                         Convert.ToDouble(dr["salario"]),
                         Convert.ToBoolean(dr["motorista"]),
                         Convert.ToBoolean(dr["tecnico"]),
-                        dr["observacao"].ToString(),
+                        dr["observacao"].ToString()
                         );
                     aListFuncionario.Add(aFuncionario);
                 }

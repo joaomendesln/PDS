@@ -4,7 +4,7 @@
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
     <div class="row">
          <div class="col-md-4">
-             <asp:Button ID="Button1" runat="server" Text="Button" OnClick="Button1_Click" />
+             <asp:Button ID="Button1" runat="server" Text="Cadastro de Clientes" OnClick="Button1_Click" PostBackUrl="~/Cliente.aspx" />
          </div>
          <div class="col-md-4">
              <asp:Button ID="Button2" runat="server" Text="Button" />

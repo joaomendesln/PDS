@@ -32,12 +32,7 @@ namespace WebApplication1.DAL
                 while (dr.Read())
                 {
                     aCliente = new Modelo.Cliente(
-                        Convert.ToInt32(dr["idCliente"]),
                         dr["nome"].ToString(),
-                        dr["telefones"].ToString(),
-                        dr["cidade"].ToString(),
-                        dr["estado"].ToString(),
-                        dr["endereco"].ToString(),
                         Convert.ToBoolean(dr["pessoa"]),
                         dr["certidao"].ToString(),
                         dr["email"].ToString()
