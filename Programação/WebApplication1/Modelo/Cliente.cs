@@ -43,8 +43,9 @@ namespace WebApplication1.Modelo
             this.email = aemail;
         }
 
-        public Cliente(string anome, bool apessoa, string acertidado, string aemail)
+        public Cliente(int aidCliente, string anome, bool apessoa, string acertidado, string aemail)
         {
+            this.idCliente = aidCliente;
             this.nome = anome;
             this.pessoa = apessoa;
             this.certidao = acertidado;
