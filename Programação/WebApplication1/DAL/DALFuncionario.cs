@@ -81,7 +81,7 @@ namespace WebApplication1.DAL
             return aFuncionario;
         }
 
-        // INSERIR CLIENTE
+        // INSERIR FUNCIONÁRIO
         [DataObjectMethod(DataObjectMethodType.Insert)]
         public void InsertFuncionario(Modelo.Funcionario obj)
         {
@@ -102,7 +102,7 @@ namespace WebApplication1.DAL
 
         }
         
-        //UPDATE CLIENTE
+        //UPDATE FUNCIONÁRIO
         [DataObjectMethod(DataObjectMethodType.Update)]
         public void UpdateFuncionario(Modelo.Funcionario obj, int idFuncionario)
         {
@@ -123,7 +123,7 @@ namespace WebApplication1.DAL
             cmd.ExecuteNonQuery();
         }
 
-        // SELECT NA QUANTIDADE DE AVALIAÇÕES DE UM FILME
+        // DELETE FUNCIONÁRIO
         [DataObjectMethod(DataObjectMethodType.Delete)]
         public void DeleteFuncionario(int idFuncionario)
         {
