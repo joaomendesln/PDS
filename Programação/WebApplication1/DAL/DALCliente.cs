@@ -83,15 +83,15 @@ namespace WebApplication1.DAL
             SqlConnection conn = new SqlConnection(connectionString);
             conn.Open();
             SqlCommand com = conn.CreateCommand();
-            SqlCommand cmd = new SqlCommand("INSERT INTO INSERT INTO Cliente(nome, telefones, cidade, estado, endereco, pessoa, certidao, email) VALUES(@nome, @telefones, @cidade, @estado, @endereco, @pessoa, @certidao, @email)", conn);
+            SqlCommand cmd = new SqlCommand("INSERT INTO Cliente(nome, telefones, cidade, estado, endereco, pessoa, certidao, email) VALUES(@nome, @telefones, @cidade, @estado, @endereco, @pessoa, @certidao, @email)", conn);
             cmd.Parameters.AddWithValue("@nome", obj.nome);
             cmd.Parameters.AddWithValue("@telefones", obj.telefones);
             cmd.Parameters.AddWithValue("@cidade", obj.cidade);
             cmd.Parameters.AddWithValue("@estado", obj.estado);
             cmd.Parameters.AddWithValue("@endereco", obj.endereco);
             cmd.Parameters.AddWithValue("@pessoa", obj.pessoa);
-            cmd.Parameters.AddWithValue("@certidao", obj.pessoa);
-            cmd.Parameters.AddWithValue("@email", obj.pessoa);
+            cmd.Parameters.AddWithValue("@certidao", obj.certidao);
+            cmd.Parameters.AddWithValue("@email", obj.email);
 
             cmd.ExecuteNonQuery();
 
