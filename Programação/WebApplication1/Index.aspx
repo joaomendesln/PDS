@@ -7,7 +7,7 @@
              <asp:Button ID="Button1" runat="server" Text="Cadastro de Clientes" OnClick="Button1_Click" PostBackUrl="~/Cliente.aspx" />
          </div>
          <div class="col-md-4">
-             <asp:Button ID="Button2" runat="server" Text="Button" />
+             <asp:Button ID="Button2" runat="server" Text="Cadastro de Funcionários PostBackUrl="~/Funcionario.aspx"" />
          </div>
          <div class="col-md-4">
              <asp:Button ID="Button3" runat="server" Text="Button" />
