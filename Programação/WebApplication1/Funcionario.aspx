@@ -24,9 +24,6 @@
                         <asp:Label ID="tecnicoLabel" runat="server" OnPreRender="tecnicoLabel_PreRender" Text='<%# Eval("tecnico") %>' />
                     </td>
                     <td>
-                        <asp:Label ID="observacaoLabel" runat="server" Text='<%# Eval("observacao") %>' />
-                    </td>
-                    <td>
                         <asp:LinkButton ID="LinkButtonEditar" runat="server" OnClick="LinkButtonEditar_Click" OnPreRender="LinkButtonEditar_PreRender">Editar</asp:LinkButton>
                     </td>
                     <td>
