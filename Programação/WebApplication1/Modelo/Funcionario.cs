@@ -42,5 +42,27 @@ namespace WebApplication1.Modelo
             this.tecnico = atecnico;
             this.observacao = aobservacao;
         }
+
+        public Funcionario(string anome, string atelefones, string aidentidade, string acarteiraDeTrabalho, double asalario, bool amotorista, bool atecnico, string aobservacao)
+        {
+            this.nome = anome;
+            this.telefones = atelefones;
+            this.identidade = aidentidade;
+            this.carteiraDeTrabalho = acarteiraDeTrabalho;
+            this.salario = asalario;
+            this.motorista = amotorista;
+            this.tecnico = atecnico;
+            this.observacao = aobservacao;
+        }
+
+        public Funcionario(string anome, string acarteiraDeTrabalho, double asalario, bool amotorista, bool atecnico, string aobservacao)
+        {
+            this.nome = anome;
+            this.carteiraDeTrabalho = acarteiraDeTrabalho;
+            this.salario = asalario;
+            this.motorista = amotorista;
+            this.tecnico = atecnico;
+            this.observacao = aobservacao;
+        }
     }
 }
