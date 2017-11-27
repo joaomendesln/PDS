@@ -34,13 +34,10 @@ namespace WebApplication1.DAL
                     aFuncionario = new Modelo.Funcionario(
                         Convert.ToInt32(dr["idFuncionario"]),
                         dr["nome"].ToString(),
-                        dr["telefones"].ToString(),
-                        dr["identidade"].ToString(),
                         dr["carteiraDeTrabalho"].ToString(),
                         Convert.ToDouble(dr["salario"]),
                         Convert.ToBoolean(dr["motorista"]),
                         Convert.ToBoolean(dr["tecnico"]),
-                        dr["observacao"].ToString()
                         );
                     aListFuncionario.Add(aFuncionario);
                 }
@@ -72,7 +69,6 @@ namespace WebApplication1.DAL
                         Convert.ToDouble(dr["salario"]),
                         Convert.ToBoolean(dr["amotorista"]),
                         Convert.ToBoolean(dr["tecnico"]),
-                        dr["observacao"].ToString(),
                         );
                 }
             }
