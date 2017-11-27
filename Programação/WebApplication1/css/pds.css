@@ -96,13 +96,12 @@ footer a {
  * Index
  */
 
-input {
+input[type="submit"]{
   background-color: #3498db;
   color: #eee;
   border: none;
   border-radius: 3px;
 }
-
 
 /*
  * Cliente
