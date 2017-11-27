@@ -11,24 +11,27 @@ namespace WebApplication1
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            protected void ButtonInserir_Click(object sender, EventArgs e)
-            {
-                Modelo.Cliente cliente = new Modelo.Cliente();
-                cliente.nome = TextBoxNome.Text;
-                cliente.telefones = TextBoxTelefones.Text;
-                cliente.cidade = TextBoxCidade.Text;
-                cliente.estado = TextBoxEstado.Text;
-                cliente.endereco = TextBoxEndereco.Text;
-                if (RadioButtonCPF.Checked) cliente.pessoa = false;
-                else cliente.pessoa = true;
-                cliente.certidao = TextBoxCertidao.Text;
-                cliente.email = TextBoxEmail.Text;
+        }
+        
+        protected void ButtonInserir_Click(object sender, EventArgs e)
+        {
+            Modelo.Cliente cliente = new Modelo.Cliente();
+            cliente.nome = TextBoxNome.Text;
+            cliente.telefones = TextBoxTelefones.Text;
+            cliente.cidade = TextBoxCidade.Text;
+            cliente.estado = TextBoxEstado.Text;
+            cliente.endereco = TextBoxEndereco.Text;
+            if (RadioButtonCPF.Checked) cliente.pessoa = false;
+            else cliente.pessoa = true;
+            cliente.certidao = TextBoxCertidao.Text;
+            cliente.email = TextBoxEmail.Text;
 
-                DAL.DALCliente DALCliente = new DAL.DALCliente();
-                DALCliente.InsertCliente(cliente);
+            DAL.DALCliente DALCliente = new DAL.DALCliente();
+            DALCliente.InsertCliente(cliente);
+                
+            Response.Redirect("~\\Cliente.aspx");  
 
 
-            }
         }
     }
 }
