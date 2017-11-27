@@ -118,7 +118,7 @@ namespace WebApplication1.DAL
             cmd.ExecuteNonQuery();
         }
 
-        // SELECT NA QUANTIDADE DE AVALIAÇÕES DE UM FILME
+        // DELETE CLIENTE
         [DataObjectMethod(DataObjectMethodType.Delete)]
         public void DeleteCliente(int idCliente)
         {
