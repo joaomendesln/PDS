@@ -49,5 +49,91 @@ namespace WebApplication1.DAL
             conn.Close();
             return aListFuncionario;
         }
+
+        // SELECIONAR UM FUNCIONÁRIO
+        [DataObjectMethod(DataObjectMethodType.Select)]
+        public Modelo.Funcionario SelectOne(int id)
+        {
+            Modelo.Funcionario aFuncionario = new Modelo.Funcionario();
+            SqlConnection conn = new SqlConnection(connectionString);
+            conn.Open();
+            SqlCommand cmd = conn.CreateCommand();
+            cmd.CommandText = "Select * From Funcionario where idFuncionario = @idFuncionario";
+            cmd.Parameters.AddWithValue("@idFuncionario", id);
+            SqlDataReader dr = cmd.ExecuteReader();
+            if (dr.HasRows)
+            {
+                while (dr.Read())
+                {
+                    aCliente = new Modelo.Cliente(
+                        Convert.ToInt32(dr["idCliente"]),
+                        dr["nome"].ToString(),
+                        dr["carteiraDeTrabalho"].ToString(),
+                        Convert.ToDouble(dr["salario"]),
+                        Convert.ToBoolean(dr["amotorista"]),
+                        Convert.ToBoolean(dr["tecnico"]),
+                        dr["observacao"].ToString(),
+                        );
+                }
+            }
+            dr.Close();
+            conn.Close();
+            return aFuncionario;
+        }
+
+        // INSERIR CLIENTE
+        [DataObjectMethod(DataObjectMethodType.Insert)]
+        public void InsertFuncionario(Modelo.Funcionario obj)
+        {
+            SqlConnection conn = new SqlConnection(connectionString);
+            conn.Open();
+            SqlCommand com = conn.CreateCommand();
+            SqlCommand cmd = new SqlCommand("INSERT INTO Funcionario(nome, telefones, identidade, carteiraDeTrabalho, salario, motorista, tecnico, observacao) VALUES(@nome, @telefones, @identidade, @carteiraDeTrabalho, @salario, @motorista, @tecnico, @observacao)", conn);
+            cmd.Parameters.AddWithValue("@nome", obj.nome);
+            cmd.Parameters.AddWithValue("@telefones", obj.telefones);
+            cmd.Parameters.AddWithValue("@identidade", obj.identidade);
+            cmd.Parameters.AddWithValue("@carteiraDeTrabalho", obj.carteiraDeTrabalho);
+            cmd.Parameters.AddWithValue("@salario", obj.salario);
+            cmd.Parameters.AddWithValue("@motorista", obj.motorista);
+            cmd.Parameters.AddWithValue("@tecnico", obj.tecnico);
+            cmd.Parameters.AddWithValue("@observacao", obj.observacao);
+
+            cmd.ExecuteNonQuery();
+
+        }
+        
+        //UPDATE CLIENTE
+        [DataObjectMethod(DataObjectMethodType.Update)]
+        public void UpdateFuncionario(Modelo.Funcionario obj, int idFuncionario)
+        {
+            SqlConnection conn = new SqlConnection(connectionString);
+            conn.Open();
+            SqlCommand com = conn.CreateCommand();
+            SqlCommand cmd = new SqlCommand("UPDATE Filme set nome = @nome, telefones = @telefones, identidade = @identidade, carteiraDeTrabalho = @carteiraDeTrabalho, salario = @salario, motorista = @motorista, tecnico = @tecnico, observacao = @observacao where idFuncionario = @idFuncionario", conn);
+            cmd.Parameters.AddWithValue("@nome", obj.nome);
+            cmd.Parameters.AddWithValue("@telefones", obj.telefones);
+            cmd.Parameters.AddWithValue("@identidade", obj.identidade);
+            cmd.Parameters.AddWithValue("@carteiraDeTrabalho", obj.carteiraDeTrabalho);
+            cmd.Parameters.AddWithValue("@salario", obj.salario);
+            cmd.Parameters.AddWithValue("@motorista", obj.motorista);
+            cmd.Parameters.AddWithValue("@tecnico", obj.tecnico);
+            cmd.Parameters.AddWithValue("@observacao", obj.observacao);
+            cmd.Parameters.AddWithValue("@idFuncionario", idFuncionario);
+
+            cmd.ExecuteNonQuery();
+        }
+
+        // SELECT NA QUANTIDADE DE AVALIAÇÕES DE UM FILME
+        [DataObjectMethod(DataObjectMethodType.Delete)]
+        public void DeleteFuncionario(int idFuncionario)
+        {
+            SqlConnection conn = new SqlConnection(connectionString);
+            conn.Open();
+            SqlCommand cmd = conn.CreateCommand();
+            cmd.CommandText = "DELETE FROM Funcionario where idFuncionario = @idFuncionario";
+            cmd.Parameters.AddWithValue("@idFuncionario", idFuncionario);
+
+            cmd.ExecuteNonQuery();
+        }
     }
 }
