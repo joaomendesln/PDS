@@ -42,6 +42,18 @@ namespace WebApplication1.Modelo
             this.certidao = acertidado;
             this.email = aemail;
         }
+        
+        public Cliente(string anome, string atelefones, string acidade, string aestado, string aendereco, bool apessoa, string acertidado, string aemail)
+        {
+            this.nome = anome;
+            this.telefones = atelefones;
+            this.cidade = acidade;
+            this.estado = aestado;
+            this.endereco = aendereco;
+            this.pessoa = apessoa;
+            this.certidao = acertidado;
+            this.email = aemail;
+        }
 
         public Cliente(int aidCliente, string anome, bool apessoa, string acertidado, string aemail)
         {
@@ -51,5 +63,7 @@ namespace WebApplication1.Modelo
             this.certidao = acertidado;
             this.email = aemail;
         }
+        
+        
     }
 }
