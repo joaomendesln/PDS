@@ -52,7 +52,7 @@ namespace WebApplication1.DAL
 
         // SELECIONAR UM FUNCIONÁRIO
         [DataObjectMethod(DataObjectMethodType.Select)]
-        public Modelo.Funcionario SelectOne(int id)
+        public Modelo.Funcionario SelectOne(int idFuncionario)
         {
             Modelo.Funcionario aFuncionario = new Modelo.Funcionario();
             SqlConnection conn = new SqlConnection(connectionString);
@@ -65,8 +65,8 @@ namespace WebApplication1.DAL
             {
                 while (dr.Read())
                 {
-                    aCliente = new Modelo.Cliente(
-                        Convert.ToInt32(dr["idCliente"]),
+                    aFuncionario = new Modelo.Funcionario(
+                        Convert.ToInt32(dr["idFuncionario"]),
                         dr["nome"].ToString(),
                         dr["carteiraDeTrabalho"].ToString(),
                         Convert.ToDouble(dr["salario"]),
