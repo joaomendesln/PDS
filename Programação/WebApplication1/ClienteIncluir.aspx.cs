@@ -30,8 +30,6 @@ namespace WebApplication1
             DALCliente.InsertCliente(cliente);
                 
             Response.Redirect("~\\Cliente.aspx");  
-
-
         }
     }
 }
