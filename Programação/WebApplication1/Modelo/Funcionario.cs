@@ -55,14 +55,13 @@ namespace WebApplication1.Modelo
             this.observacao = aobservacao;
         }
 
-        public Funcionario(string anome, string acarteiraDeTrabalho, double asalario, bool amotorista, bool atecnico, string aobservacao)
+        public Funcionario(string anome, string acarteiraDeTrabalho, double asalario, bool amotorista, bool atecnico)
         {
             this.nome = anome;
             this.carteiraDeTrabalho = acarteiraDeTrabalho;
             this.salario = asalario;
             this.motorista = amotorista;
             this.tecnico = atecnico;
-            this.observacao = aobservacao;
         }
     }
 }
